@@ -36,8 +36,7 @@ RUN apt-get update -y && apt-get install -y \
     libpoppler-dev \
     libspatialite-dev \
     libhdf4-alt-dev \
-    libhdf5-serial-dev \
-    wget
+    libhdf5-serial-dev
 
 # Compile and install GDAL
 RUN cd src \
@@ -48,5 +47,5 @@ RUN cd src \
     && make install \
     && ldconfig \
     && apt-get update -y \
-    && apt-get remove -y --purge build-essential wget \
+    && apt-get remove -y --purge build-essential \
     && rm -Rf $ROOTDIR/src/*
