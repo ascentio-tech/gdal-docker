@@ -18,6 +18,7 @@ ENV GDAL_VERSION 2.1.3
 WORKDIR $ROOTDIR
 
 # Install basic dependencies
+RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142";' | sudo tee /etc/apt/apt.conf.d/01proxy
 RUN apt-get update -y \
     && apt-get install --no-install-recommends -y \
       curl \
