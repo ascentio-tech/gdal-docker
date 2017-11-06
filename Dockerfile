@@ -10,13 +10,13 @@
 FROM ubuntu:trusty
 MAINTAINER Franco Riberi <friberi@ascentio.com.ar>
 
-ENV ROOTDIR /usr/local/
-ENV GDAL_VERSION 2.1.1
 
 # Load assets
-WORKDIR $ROOTDIR/
+ENV ROOTDIR /usr/local/
+ENV GDAL_VERSION 2.1.3
 
 ADD http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz $ROOTDIR/src/
+WORKDIR $ROOTDIR
 
 # Install basic dependencies
 RUN apt-get update -y && apt-get install -y \
