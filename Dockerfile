@@ -10,15 +10,14 @@
 FROM ubuntu:trusty
 MAINTAINER Franco Riberi <friberi@ascentio.com.ar>
 
-
 # Load assets
 ENV ROOTDIR /usr/local/
 ENV GDAL_VERSION 2.1.3
 
 WORKDIR $ROOTDIR
 
+RUN echo "Acquire::http::Proxy \"$http_proxy\";" | tee /etc/apt/apt.conf.d/01proxy
 # Install basic dependencies
-RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142";' | sudo tee /etc/apt/apt.conf.d/01proxy
 RUN apt-get update -y \
     && apt-get install --no-install-recommends -y \
       curl \
