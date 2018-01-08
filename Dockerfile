@@ -17,6 +17,7 @@ ENV GDAL_VERSION 2.1.3
 WORKDIR $ROOTDIR
 
 RUN echo "Acquire::http::Proxy \"$http_proxy\";" | tee /etc/apt/apt.conf.d/01proxy
+
 # Install basic dependencies
 RUN apt-get update -y \
     && apt-get install --no-install-recommends -y \
@@ -47,9 +48,6 @@ RUN apt-get update -y \
     && make \
     && make install \
     && ldconfig \
-    && apt-get update -y \
-    && apt-get remove -y --purge build-essential \
-    && rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/share/doc/* \
     && rm -Rf $ROOTDIR/src/* \
     && apt-get purge -y \
@@ -58,8 +56,9 @@ RUN apt-get update -y \
       libspatialite-dev \
       libcurl4-gnutls-dev \
       libproj-dev \
-      libgeos-dev \
       libpoppler-dev \
       libspatialite-dev \
     && apt-get autoremove -y \
-    && apt-get autoclean -y
+    && apt-get autoclean -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
