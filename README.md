@@ -1,6 +1,6 @@
 # Docker Gdal Base Image
 
-This is a docker base image for the Plamedma project. Based on Ubuntu 14.04 Trusty and Gdal 2.1.1.
+This is a docker base image for the Plamedma project. Based on Ubuntu 14.04 Trusty and Gdal 2.1.3.
 
 ## Install Docker
 * [Official Docker Page](https://www.docker.com/)
