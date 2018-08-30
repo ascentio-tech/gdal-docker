@@ -54,3 +54,5 @@ RUN apt-get update -y \
     && apt-get autoclean -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
