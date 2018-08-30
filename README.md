@@ -1,24 +1,27 @@
-# Docker Gdal Base Image
+# gdal docker image [![Build Status](http://jenkins.ascentio.com.ar/jenkins/job/ascentiotech/job/gdal_image/badge/icon)](http://jenkins.ascentio.com.ar/jenkins/job/ascentiotech/job/gdal_image/)
 
-This is a docker base image for the Plamedma project. Based on Ubuntu 14.04 Trusty and Gdal 2.1.3.
+# How to build?
 
-## Install Docker
-* [Official Docker Page](https://www.docker.com/)
+`make build-image`: It will create **ascentiotech/gdal** image
 
-* [Install Docker on Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/)
+You can optimize build times using an http cache (1) and executing:
 
-* [How run docker without sudo](http://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
+`make build-image HTTP_PROXY=http://172.17.0.1:3128 HTTPS_PROXY=http://172.17.0.1:3128`
+or just
+`make build-image-with-local-cache`
 
-* [Docker Volume](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume)
+## Lint Dockerfile
 
-* You can use [asc-devkit](https://gitlab.ascentio.com.ar/DEV/asc-devkit) to install docker
+`make lint-image` will check Dockerfile format
 
-## Generate the image called gdal-trusty
 
-```sh
-   make build
-```
+### Notes
 
-### Using a caching proxy to improve image build times
-1. Use [squid-cache](https://gitlab.ascentio.com.ar/DEV/squid-cache)
-2. `make build HTTP_PROXY=http://172.17.0.1:3128`
+1: You can spin up a local http cache with [asc-devkit](https://gitlab.ascentio.com.ar/DEV/asc-devkit) and **docker start-build-cache** command.
+
+# References
+
+* https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository
+* https://mesosphere.com/blog/mesosphere-package-repositories/
+* https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/
+* https://blog.docker.com/2013/09/docker-can-now-run-within-docker

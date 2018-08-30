@@ -1,7 +1,3 @@
-#
-# author: Franco Riberi
-#
+IMAGE=ascentiotech/gdal
 
-HTTP_PROXY=
-build:
-	docker build --build-arg http_proxy=${HTTP_PROXY} -t plamedma/gdal-trusty .
+include inc/docker.mk

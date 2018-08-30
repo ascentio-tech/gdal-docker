@@ -1,0 +1,9 @@
+{
+  "generator-asc-docker": {
+    "promptValues": {
+      "name": "gdal",
+      "group": "ascentiotech",
+      "version": "latest"
+    }
+  }
+}

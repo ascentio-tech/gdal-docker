@@ -1,0 +1,12 @@
+gdal docker image
+========================================================================
+
+* Version: 2.1.3-trusty
+
+** Date: 2018/08/29
+
+** Features
+
+  * Base Image: ubuntu/trusty
+  * GDAL: 2.1.3
+  * Python: 2.7
