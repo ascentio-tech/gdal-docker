@@ -4,6 +4,7 @@ ENV ROOTDIR /usr/local/
 WORKDIR $ROOTDIR/src
 RUN echo "Acquire::http::Proxy \"$http_proxy\";" | tee /etc/apt/apt.conf.d/01proxy
 ARG GDAL_VERSION=2.3.1
+ARG THREADS=2
 RUN apt-get update \
   && apt-get install --no-install-recommends -y \
      python3 python3-dev python3-pip build-essential \
@@ -13,7 +14,7 @@ RUN apt-get update \
   && tar zxvf gdal-${GDAL_VERSION}.tar.gz \
   && cd gdal-${GDAL_VERSION}/ \
   && ./configure --prefix=/usr/ --with-python --with-hdf5 --with-geos=yes \
-  && make -j 8 \
+  && make -j ${THREADS} \
   && make install \
   && cd swig/python/ \
   && python3 setup.py install \
