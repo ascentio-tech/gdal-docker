@@ -1,4 +1,10 @@
-# gdal docker image [![Build Status](http://jenkins.ascentio.com.ar/jenkins/job/ascentiotech/job/gdal_image/badge/icon)](http://jenkins.ascentio.com.ar/jenkins/job/ascentiotech/job/gdal_image/)
+# gdal docker image [![](https://images.microbadger.com/badges/version/ascentiotech/gdal.svg)](https://microbadger.com/images/ascentiotech/gdal "Get your own version badge on microbadger.com")
+
+* latest: [![](https://images.microbadger.com/badges/version/ascentiotech/gdal.svg)](https://microbadger.com/images/ascentiotech/gdal "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/ascentiotech/gdal.svg)](https://microbadger.com/images/ascentiotech/gdal "Get your own image badge on microbadger.com")
+* latest on trusty: [![](https://images.microbadger.com/badges/version/ascentiotech/gdal:latest-trusty.svg)](https://microbadger.com/images/ascentiotech/gdal:latest-trusty "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/ascentiotech/gdal:latest-trusty.svg)](https://microbadger.com/images/ascentiotech/gdal "Get your own image badge on microbadger.com")
+* latest on bionic: [![](https://images.microbadger.com/badges/version/ascentiotech/gdal:latest-bionic.svg)](https://microbadger.com/images/ascentiotech/gdal:latest-bionic "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/ascentiotech/gdal:latest-bionic.svg)](https://microbadger.com/images/ascentiotech/gdal "Get your own image badge on microbadger.com")
+* latest on debian: [![](https://images.microbadger.com/badges/version/ascentiotech/gdal:latest-debian.svg)](https://microbadger.com/images/ascentiotech/gdal:latest-debian "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/ascentiotech/gdal:latest-debian.svg)](https://microbadger.com/images/ascentiotech/gdal "Get your own image badge on microbadger.com")
+
 
 # How to build?
 
