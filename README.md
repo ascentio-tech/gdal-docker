@@ -1,4 +1,4 @@
-# gdal docker image [![Build Status](http://jenkins.ascentio.com.ar/jenkins/job/ascentiotech/job/gdal_image/badge/icon)](http://jenkins.ascentio.com.ar/jenkins/job/ascentiotech/job/gdal_image/)
+# gdal docker image
 
 # How to build?
 
@@ -13,11 +13,6 @@ or just
 ## Lint Dockerfile
 
 `make lint-image` will check Dockerfile format
-
-
-### Notes
-
-1: You can spin up a local http cache with [asc-devkit](https://gitlab.ascentio.com.ar/DEV/asc-devkit) and **docker start-build-cache** command.
 
 # References
 
