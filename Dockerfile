@@ -31,6 +31,6 @@ RUN apt-get update \
       /tmp/* \
       /var/tmp/* \
       /etc/apt/apt.conf.d/01proxy \
-      ${ROOTDIR}
+      ${ROOTDIR}/src
 
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
