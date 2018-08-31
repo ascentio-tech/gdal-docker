@@ -26,6 +26,10 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && apt-get autoclean -y \
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /etc/apt/apt.conf.d/01proxy
+    && rm -rf /var/lib/apt/lists/* \
+      /tmp/* \
+      /var/tmp/* \
+      /etc/apt/apt.conf.d/01proxy \
+      ${ROOTDIR}
 
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
