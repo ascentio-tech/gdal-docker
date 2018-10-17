@@ -9,7 +9,7 @@ RUN apt-get update \
   && apt-get install --no-install-recommends -y \
      python3 python3-dev python3-pip build-essential \
      wget software-properties-common \
-  && pip3 install --no-cache setuptools==40.2.0 \
+  && pip3 install --no-cache setuptools==40.2.0 numpy==1.15.2 \
   && wget https://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz \
   && tar zxvf gdal-${GDAL_VERSION}.tar.gz \
   && cd gdal-${GDAL_VERSION}/ \
