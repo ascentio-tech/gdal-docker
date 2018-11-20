@@ -47,7 +47,6 @@ RUN apt-get update -y \
       python-dev \
       libspatialite-dev \
       libcurl4-gnutls-dev \
-      libproj-dev \
       libpoppler-dev \
       libspatialite-dev \
     && apt-get autoremove -y \
